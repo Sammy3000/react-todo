@@ -41,23 +41,10 @@
 
 To get a local copy up and running, follow these steps.
 
-1. Clone the Repo or Download the Zip file or `https://github.com/Sammy3000/React-todo-list.git`
+1. Clone the Repo or Download the Zip file or `https://github.com/Sammy3000/react-todo.git`
 2. cd todo-list
 3. Open it with the live server
 
-## Prerequisites
-
-### Getting started with Vite
-
-- With npm
-- `$ npm create vite@latest`
-
-- Choose framework and language.
-
-  `cd my-project`
-
-`npm install`
-`npm run dev`
 
  <!-- LIVE DEMO -->
 
@@ -82,7 +69,7 @@ Example commands:
 
 Install this project with:
 
-- to install locally run git clone https://github.com/Sammy3000/React-todo-list.git
+- to install locally run git clone https://github.com/Sammy3000/react-todo.git
 - open the cloned directory with VSCode
 
 ### Run tests
@@ -105,7 +92,11 @@ And For tracking linter errors in REACT files run:
 
 ### Usage
 
-- Feel free to use this project.
+- To run the project, execute the following command:
+
+ Example command:
+
+  `npm start`
 
 <!-- AUTHORS -->
 
