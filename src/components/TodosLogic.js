@@ -1,12 +1,12 @@
-import React, { useState, useEffect } from "react";
-import { v4 as uuidv4 } from "uuid";
-import InputTodo from "./InputTodo";
-import TodosList from "./TodosList";
+import React, { useState, useEffect } from 'react';
+import { v4 as uuidv4 } from 'uuid';
+import InputTodo from './InputTodo';
+import TodosList from './TodosList';
 
 const TodosLogic = () => {
   function getInitialTodos() {
     // getting stored items
-    const temp = localStorage.getItem("todos");
+    const temp = localStorage.getItem('todos');
     const savedTodos = JSON.parse(temp);
     return savedTodos || [];
   }
@@ -14,21 +14,19 @@ const TodosLogic = () => {
   useEffect(() => {
     // storing todos items
     const temp = JSON.stringify(todos);
-    localStorage.setItem("todos", temp);
+    localStorage.setItem('todos', temp);
   }, [todos]);
 
   const handleChange = (id) => {
-    setTodos((prevState) =>
-      prevState.map((todo) => {
-        if (todo.id === id) {
-          return {
-            ...todo,
-            completed: !todo.completed,
-          };
-        }
-        return todo;
-      })
-    );
+    setTodos((prevState) => prevState.map((todo) => {
+      if (todo.id === id) {
+        return {
+          ...todo,
+          completed: !todo.completed,
+        };
+      }
+      return todo;
+    }));
   };
   const delTodo = (id) => {
     setTodos([...todos.filter((todo) => todo.id !== id)]);
@@ -46,10 +44,10 @@ const TodosLogic = () => {
     setTodos(
       todos.map((todo) => {
         if (todo.id === id) {
-          todo.title = updatedTitle;
+          todo.title = updatedTitle; // eslint-disable-line
         }
         return todo;
-      })
+      }),
     );
   };
 

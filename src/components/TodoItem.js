@@ -1,7 +1,9 @@
-import React, { useState } from "react";
-import "./TodoItem.css";
+import React, { useState } from 'react';
+import './TodoItem.css';
 
-const TodoItem = ({ itemProp, handleChange, delTodo, setUpdate }) => {
+const TodoItem = ({
+  itemProp, handleChange, delTodo, setUpdate,
+}) => {
   const [editing, setEditing] = useState(false);
   const handleEditing = () => {
     setEditing(true);
@@ -9,12 +11,12 @@ const TodoItem = ({ itemProp, handleChange, delTodo, setUpdate }) => {
   const viewMode = {};
   const editMode = {};
   if (editing) {
-    viewMode.display = "none";
+    viewMode.display = 'none';
   } else {
-    editMode.display = "none";
+    editMode.display = 'none';
   }
   const handleUpdatedDone = (event) => {
-    if (event.key === "Enter") {
+    if (event.key === 'Enter') {
       setEditing(false);
     }
   };
