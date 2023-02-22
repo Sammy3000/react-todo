@@ -1,9 +1,7 @@
-import React, { useState } from 'react';
-import styles from '@/styles/TodoItem.module.css';
+import React, { useState } from "react";
+import "./TodoItem.css";
 
-const TodoItem = ({
-  itemProp, handleChange, delTodo, setUpdate,
-}) => {
+const TodoItem = ({ itemProp, handleChange, delTodo, setUpdate }) => {
   const [editing, setEditing] = useState(false);
   const handleEditing = () => {
     setEditing(true);
@@ -11,18 +9,18 @@ const TodoItem = ({
   const viewMode = {};
   const editMode = {};
   if (editing) {
-    viewMode.display = 'none';
+    viewMode.display = "none";
   } else {
-    editMode.display = 'none';
+    editMode.display = "none";
   }
   const handleUpdatedDone = (event) => {
-    if (event.key === 'Enter') {
+    if (event.key === "Enter") {
       setEditing(false);
     }
   };
   return (
-    <li className={styles.item}>
-      <div className={styles.content} style={viewMode}>
+    <li className="item">
+      <div className="content" style={viewMode}>
         <input
           type="checkbox"
           checked={itemProp.completed}
@@ -39,7 +37,7 @@ const TodoItem = ({
       <input
         type="text"
         value={itemProp.title}
-        className={styles.textInput}
+        className="textInput"
         style={editMode}
         onChange={(e) => setUpdate(e.target.value, itemProp.id)}
         onKeyDown={handleUpdatedDone}
